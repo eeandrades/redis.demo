@@ -21,7 +21,7 @@ namespace redis.demo
         {
             services.AddControllers();
 
-            var redis = ConnectionMultiplexer.Connect("192.168.110.97:6379");
+            var redis = ConnectionMultiplexer.Connect("localhost:6379");
             services.AddScoped(s => redis.GetDatabase());
         }
 

@@ -6,13 +6,13 @@ using System.Text.Json;
 
 namespace redis.demo.Controllers
 {
-    [Route("[controller]")]
+    [Route("Clientes")]
     [ApiController]
-    public class CacheController : ControllerBase
+    public class ClienteController : ControllerBase
     {
         private readonly IDatabase _database;
 
-        public CacheController(IDatabase dataBase)
+        public ClienteController(IDatabase dataBase)
         {
             this._database = dataBase ?? throw new ArgumentNullException(nameof(dataBase));
         }
