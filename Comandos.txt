@@ -1,0 +1,17 @@
+﻿
+--iniciar docker
+docker run --name local-redis -p 6379:6379 -d redis
+
+--start
+docker start local-redis
+
+docker run -it --network some-network --rm redis redis-cli -h some-redis
+
+--entra do docker
+docker exec -it local-redis /bin/bash
+
+--executa o cli
+redis-cli
+
+
+
